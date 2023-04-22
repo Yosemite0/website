@@ -1,6 +1,7 @@
 properties([pipelineTriggers([githubPush()])])
 pipeline {
     agent any
+    stages{
         stage('Build') {
           steps {
             build job: 'Capstone_Build_Project'
